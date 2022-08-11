@@ -37,7 +37,6 @@ export default class Person extends Component {
                               fontWeight: "bold", 
                               fontSize: "24px", 
                               display: "grid", 
-                              
                               justifyContent: "center"}}> {this.props.firstName} {this.props.lastName}</Card.Title><br/>
         <Card.Img variant = "top" src = {this.props.pic} alt = {this.props.firstName} width = "200" style = {{border:"4px powderblue solid", 
                                                                                                               borderRadius: "5px", 

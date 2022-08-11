@@ -12,6 +12,8 @@ export default class App extends Component {
       <>
 
       <Header/>
+      <br/>
+      <br/>
       <Main/>
       <Footer/>
 
