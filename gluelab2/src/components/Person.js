@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Main from "./Main";
-import {Button,Card,} from "react-bootstrap";
 import "../App.css";
+
+
+import {Button,Card,} from "react-bootstrap";
 
 export default class Person extends Component {
     constructor(props){
@@ -23,7 +24,7 @@ export default class Person extends Component {
     return (
       <>
    
-    <Card style = {{width: '20rem',
+    <Card style = {{width: '22rem',
                     backgroundColor: "white",
                     border: "3px black solid",
                     borderRadius: "5px", 
@@ -32,9 +33,19 @@ export default class Person extends Component {
                     }}>
 
         <Card.Body style = {{display: "grid", justifyContent: "center"}}>
-        <Card.Title style = {{fontFamily: "Indie Flower", fontWeight: "bold", fontSize: "24px", display: "grid", justifyContent: "center"}}> {this.props.firstName} {this.props.lastName}</Card.Title><br/>
-        <Card.Img variant = "top" src = {this.props.pic} alt = {this.props.firstName} width = "200" style = {{border:"4px powderblue solid", borderRadius: "5px", display: "grid", justifyContent: "center"}}></Card.Img>
-        
+        <Card.Title style = {{fontFamily: "Indie Flower", 
+                              fontWeight: "bold", 
+                              fontSize: "24px", 
+                              display: "grid", 
+                              
+                              justifyContent: "center"}}> {this.props.firstName} {this.props.lastName}</Card.Title><br/>
+        <Card.Img variant = "top" src = {this.props.pic} alt = {this.props.firstName} width = "200" style = {{border:"4px powderblue solid", 
+                                                                                                              borderRadius: "5px", 
+                                                                                                              display: "grid", 
+                                                                                                              marginBottom:"10px",
+                                                                                                              justifyContent: "center"}}></Card.Img>
+      
+
         <Card.Text style = {{backgroundColor: "lightblue",
                             padding: "5px",
                             borderRadius: "5px",
@@ -43,10 +54,10 @@ export default class Person extends Component {
                              display: "grid", 
                              justifyContent: "center"
                              }}>Trivia</Card.Text>
-        <Card.Text style = {{fontSize: "14px", fontFamily: "Arial", width: "200px", display: "grid", justifyContent: "justify"}}>{this.props.trivia}</Card.Text>
+        <Card.Text style = {{fontSize: "14px", fontFamily: "Arial", width: "300px", display: "grid", justifyContent: "justify"}}>{this.props.trivia}</Card.Text>
         {/* <Card.Text style = {{color: "black", fontSize: "12px"}}>Location: {this.props.city}</Card.Text> */}
             
-        <Button variant = "light" onClick = {() => this.handleClicks()}> Played with: {this.state.cart}</Button>{''}
+        <Button variant = "outline-dark" onClick = {() => this.handleClicks()}> Played with: {this.state.cart}</Button>{''}
 
 
         </Card.Body>
